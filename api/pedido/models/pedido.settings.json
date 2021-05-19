@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "name": "pedido",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "endereco": {
+      "type": "text"
+    },
+    "pago": {
+      "type": "boolean"
+    },
+    "total": {
+      "type": "string"
+    },
+    "itens": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "name": "categoria"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "produtos": {
+      "via": "categorias",
+      "collection": "produto"
+    }
+  }
+}

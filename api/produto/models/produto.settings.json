@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produtos",
+  "info": {
+    "name": "produto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "categorias": {
+      "collection": "categoria",
+      "via": "produtos",
+      "dominant": true
+    },
+    "titulo": {
+      "type": "text",
+      "required": true
+    },
+    "descricao": {
+      "type": "richtext",
+      "required": true
+    },
+    "preco": {
+      "type": "integer",
+      "required": true
+    },
+    "preco_comparativo": {
+      "type": "integer"
+    },
+    "tamanhos": {
+      "type": "richtext",
+      "required": true
+    },
+    "cores": {
+      "type": "richtext",
+      "required": false
+    },
+    "imagem_de_capa": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "imagens_secondarias": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo"
+    }
+  }
+}

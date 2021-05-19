@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets",
+  "info": {
+    "name": "assets"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "assetName": {
+      "type": "string"
+    }
+  }
+}
